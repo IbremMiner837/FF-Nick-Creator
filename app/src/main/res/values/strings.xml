@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Nick Creator</string>
+
+    <string name="nickname">Nickname</string>
+    <string name="enter_nickname">Enter your desired\nin-game nickname</string>
+    <string name="enter_nickname_to_continue">Enter nickname to continue</string>
+
 </resources>

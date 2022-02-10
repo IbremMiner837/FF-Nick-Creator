@@ -13,7 +13,7 @@
         android:layout_above="@+id/linearL"
         android:layout_marginBottom="128dp"
         android:layout_centerHorizontal="true"
-        android:text="Введите желаемый\n игровой никнейм"
+        android:text="@string/enter_nickname"
         android:textSize="28sp"
         android:textStyle="bold"
         android:textAlignment="center"/>
@@ -28,20 +28,22 @@
         android:layout_centerHorizontal="true">
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/outlinedTextField"
             android:layout_width="278dp"
             android:layout_height="wrap_content"
-            android:hint="NickName"
+            android:hint="@string/nickname"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/nickname_input"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textSize="21sp"
                 android:singleLine="true"
                 android:maxLength="12"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/random_nick_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:icon="@drawable/ic_baseline_random_24"
@@ -57,6 +59,7 @@
         android:layout_alignParentBottom="true">
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/next_step"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
