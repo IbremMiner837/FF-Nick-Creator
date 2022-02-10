@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Nick Creator</string>
+    <string name="nickname">Никнейм</string>
+    <string name="enter_nickname">Введите желаемый\nигровой никнейм</string>
+    <string name="enter_nickname_to_continue">Введите никнейм чтобы продолжить</string>
+</resources>

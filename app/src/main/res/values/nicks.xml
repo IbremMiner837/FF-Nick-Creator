@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="chechen_males_nicknames">
+        <item>Ibragim</item>
+        <item>Islam</item>
+        <item>Jakub</item>
+        <item>Shamil</item>
+        <item>Adlan</item>
+        <item>Maga</item>
+        <item>Magomed</item>
+        <item>Abdul</item>
+    </string-array>
+
+    <array name="chechen_female_nicknames">
+        <item>Maina</item>
+        <item>Kheda</item>
+        <item>Khava</item>
+        <item>Khadi</item>
+        <item>Iman</item>
+    </array>
+
+    <string-array name="russian_males_nicknames">
+        <item>Dmitriy</item>
+        <item>Artem</item>
+        <item>Kirill</item>
+        <item>Serafim</item>
+        <item>Danila</item>
+    </string-array>
+
+    <array name="random">
+        <item>DarkMouse</item>
+        <item>Ms.Mouse</item>
+    </array>
+</resources>
