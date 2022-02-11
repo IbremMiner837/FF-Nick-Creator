@@ -4,5 +4,7 @@
     <string name="nickname">Nickname</string>
     <string name="enter_nickname">Enter your desired\nin-game nickname</string>
     <string name="enter_nickname_to_continue">Enter nickname to continue</string>
-
+    <string name="choose_font_for_nickname">Choose the font\nyou like for\nthe nickname</string>
+    <string name="random">Random</string>
+    <string name="random_font">Random font</string>
 </resources>

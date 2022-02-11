@@ -4,4 +4,7 @@
     <string name="nickname">Никнейм</string>
     <string name="enter_nickname">Введите желаемый\nигровой никнейм</string>
     <string name="enter_nickname_to_continue">Введите никнейм чтобы продолжить</string>
+    <string name="choose_font_for_nickname">Выберите понравившийся\nшрифт для никнейма</string>
+    <string name="random">Рандом</string>
+    <string name="random_font">Рандомный шрифт</string>
 </resources>

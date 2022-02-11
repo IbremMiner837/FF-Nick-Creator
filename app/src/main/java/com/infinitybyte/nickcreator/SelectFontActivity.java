@@ -6,7 +6,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
 
+import com.google.android.material.button.MaterialButton;
 import com.infinitybyte.nickcreator.adapter.Adapter;
 import com.infinitybyte.nickcreator.adapter.Model;
 
@@ -15,28 +18,73 @@ import java.util.List;
 
 public class SelectFontActivity extends AppCompatActivity {
 
-    private RecyclerView mRecyclerView;
-    private List<Model> viewItems = new ArrayList<>();
-    private RecyclerView.Adapter adapter;
-    private RecyclerView.LayoutManager layoutManager;
+    //private RecyclerView mRecyclerView;
+    //private List<Model> viewItems = new ArrayList<>();
+    //private RecyclerView.Adapter adapter;
+    //private RecyclerView.LayoutManager layoutManager;
+    private TextView nickname;
+    private MaterialButton next_step, before_step, next_font, before_font, random_font;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_font);
 
-        mRecyclerView = (RecyclerView) findViewById(R.id.recview);
-        mRecyclerView.setHasFixedSize(true);
-        layoutManager = new LinearLayoutManager(this);
-        mRecyclerView.setLayoutManager(layoutManager);
-        adapter = new Adapter(this, viewItems);
-        mRecyclerView.setAdapter(adapter);
+        //mRecyclerView = (RecyclerView) findViewById(R.id.recview);
+        //mRecyclerView.setHasFixedSize(true);
+        //layoutManager = new LinearLayoutManager(this);
+        //mRecyclerView.setLayoutManager(layoutManager);
+        //adapter = new Adapter(this, viewItems);
+        //mRecyclerView.setAdapter(adapter);
+        //String nicknameString = getIntent().getStringExtra("nickname");
+        //Model nicknameItem = new Model(nicknameString);
+        //viewItems.add(nicknameItem);
+        //viewItems.add(nicknameItem);
+
+        nickname = findViewById(R.id.nickname_list);
+        next_step = findViewById(R.id.next_step);
+        before_step = findViewById(R.id.before_step);
+        next_font = findViewById(R.id.next_font);
+        before_font = findViewById(R.id.before_font);
+        random_font = findViewById(R.id.random_font);
 
         String nicknameString = getIntent().getStringExtra("nickname");
 
-        Model nicknameItem = new Model(nicknameString);
+        nickname.setText(nicknameString);
 
-        viewItems.add(nicknameItem);
-        viewItems.add(nicknameItem);
+        next_step.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //
+            }
+        });
+
+        before_step.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //
+            }
+        });
+
+        next_font.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //
+            }
+        });
+
+        before_font.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //
+            }
+        });
+
+        random_font.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //
+            }
+        });
     }
 }
