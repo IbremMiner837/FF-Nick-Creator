@@ -2,6 +2,7 @@ package com.infinitybyte.nickcreator;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -55,7 +56,9 @@ public class MainActivity extends AppCompatActivity {
                 if(nickname_input.getText().toString().isEmpty()) {
                     Toast.makeText(v.getContext(), R.string.enter_nickname_to_continue, Toast.LENGTH_SHORT).show();
                 } else {
-                    next_step.setClickable(true);
+                    Intent intent = new Intent(v.getContext(), SelectFontActivity.class);
+                    intent.putExtra("nickname", nickname_input.getText().toString());
+                    v.getContext().startActivity(intent);
                 }
             }
         });
