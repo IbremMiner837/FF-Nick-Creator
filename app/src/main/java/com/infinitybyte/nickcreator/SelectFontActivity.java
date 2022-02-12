@@ -1,10 +1,13 @@
 package com.infinitybyte.nickcreator;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.graphics.Typeface;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -15,7 +18,9 @@ import com.infinitybyte.nickcreator.adapter.Model;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
+@RequiresApi(api = Build.VERSION_CODES.O)
 public class SelectFontActivity extends AppCompatActivity {
 
     //private RecyclerView mRecyclerView;
@@ -24,6 +29,12 @@ public class SelectFontActivity extends AppCompatActivity {
     //private RecyclerView.LayoutManager layoutManager;
     private TextView nickname;
     private MaterialButton next_step, before_step, next_font, before_font, random_font;
+    private Typeface[] font = {
+            getResources().getFont(R.font.festive_regular),
+            getResources().getFont(R.font.rowdies_bold),
+            getResources().getFont(R.font.rowdies_light),
+            getResources().getFont(R.font.rowdies_regular)
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,7 +94,8 @@ public class SelectFontActivity extends AppCompatActivity {
         random_font.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //
+                //[new Random().nextInt(array.length)];
+                //nickname.setTypeface(font[new Random().nextInt(font.length)]);
             }
         });
     }
