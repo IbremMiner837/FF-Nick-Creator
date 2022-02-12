@@ -29,12 +29,6 @@ public class SelectFontActivity extends AppCompatActivity {
     //private RecyclerView.LayoutManager layoutManager;
     private TextView nickname;
     private MaterialButton next_step, before_step, next_font, before_font, random_font;
-    private Typeface[] font = {
-            getResources().getFont(R.font.festive_regular),
-            getResources().getFont(R.font.rowdies_bold),
-            getResources().getFont(R.font.rowdies_light),
-            getResources().getFont(R.font.rowdies_regular)
-    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +45,13 @@ public class SelectFontActivity extends AppCompatActivity {
         //Model nicknameItem = new Model(nicknameString);
         //viewItems.add(nicknameItem);
         //viewItems.add(nicknameItem);
+
+        Typeface[] font = {
+                getResources().getFont(R.font.festive_regular),
+                getResources().getFont(R.font.rowdies_bold),
+                getResources().getFont(R.font.rowdies_light),
+                getResources().getFont(R.font.rowdies_regular)
+        };
 
         nickname = findViewById(R.id.nickname_list);
         next_step = findViewById(R.id.next_step);
@@ -80,14 +81,14 @@ public class SelectFontActivity extends AppCompatActivity {
         next_font.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //
+                nickname.setTypeface(font[0]);
             }
         });
 
         before_font.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //
+                nickname.setTypeface(font[1]);
             }
         });
 
@@ -95,7 +96,7 @@ public class SelectFontActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //[new Random().nextInt(array.length)];
-                //nickname.setTypeface(font[new Random().nextInt(font.length)]);
+                nickname.setTypeface(font[new Random().nextInt(font.length)]);
             }
         });
     }
