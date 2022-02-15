@@ -29,6 +29,7 @@ public class SelectFontActivity extends AppCompatActivity {
     //private RecyclerView.LayoutManager layoutManager;
     private TextView nickname;
     private MaterialButton next_step, before_step, next_font, before_font, random_font;
+    private int indexPos = -1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +47,7 @@ public class SelectFontActivity extends AppCompatActivity {
         //viewItems.add(nicknameItem);
         //viewItems.add(nicknameItem);
 
-        Typeface[] font = {
+        Typeface[] font = new Typeface[] {
                 getResources().getFont(R.font.festive_regular),
                 getResources().getFont(R.font.rowdies_bold),
                 getResources().getFont(R.font.rowdies_light),
@@ -81,14 +82,32 @@ public class SelectFontActivity extends AppCompatActivity {
         next_font.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                nickname.setTypeface(font[0]);
+                if (indexPos == -1) {
+                    indexPos++;
+                    nickname.setTypeface(font[indexPos]);
+                } else if (indexPos >= 3) {
+                    indexPos = 0;
+                    nickname.setTypeface(font[indexPos]);
+                } else if (indexPos >= 0) {
+                    indexPos++;
+                    nickname.setTypeface(font[indexPos]);
+                }
             }
         });
 
         before_font.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                nickname.setTypeface(font[1]);
+                if (indexPos == -1) {
+                    indexPos = 3;
+                    nickname.setTypeface(font[indexPos]);
+                } else if (indexPos <= 0) {
+                    indexPos = 3;
+                    nickname.setTypeface(font[indexPos]);
+                } else if (indexPos <= 3) {
+                    indexPos--;
+                    nickname.setTypeface(font[indexPos]);
+                }
             }
         });
 
