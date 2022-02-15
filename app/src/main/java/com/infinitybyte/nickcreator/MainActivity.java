@@ -21,7 +21,7 @@ import java.util.Random;
 public class MainActivity extends AppCompatActivity {
 
     private TextInputEditText nickname_input;
-    private MaterialButton random_nick, next_step;
+    private MaterialButton random_nick, next_step, finished_nickname;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         nickname_input = findViewById(R.id.nickname_input);
         random_nick = findViewById(R.id.random_nick_btn);
         next_step = findViewById(R.id.next_step);
+        finished_nickname = findViewById(R.id.finished_nickname);
 
         random_nick.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,6 +61,13 @@ public class MainActivity extends AppCompatActivity {
                     intent.putExtra("nickname", nickname_input.getText().toString());
                     v.getContext().startActivity(intent);
                 }
+            }
+        });
+
+        finished_nickname.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //
             }
         });
     }
