@@ -2,10 +2,6 @@ package com.infinitybyte.nickcreator;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
-import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
@@ -13,20 +9,11 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.google.android.material.button.MaterialButton;
-import com.infinitybyte.nickcreator.adapter.Adapter;
-import com.infinitybyte.nickcreator.adapter.Model;
-
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 
 @RequiresApi(api = Build.VERSION_CODES.O)
 public class SelectFontActivity extends AppCompatActivity {
 
-    //private RecyclerView mRecyclerView;
-    //private List<Model> viewItems = new ArrayList<>();
-    //private RecyclerView.Adapter adapter;
-    //private RecyclerView.LayoutManager layoutManager;
     private TextView nickname;
     private MaterialButton next_step, before_step, next_font, before_font, random_font;
     private int indexPos = -1;
@@ -35,17 +22,6 @@ public class SelectFontActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_font);
-
-        //mRecyclerView = (RecyclerView) findViewById(R.id.recview);
-        //mRecyclerView.setHasFixedSize(true);
-        //layoutManager = new LinearLayoutManager(this);
-        //mRecyclerView.setLayoutManager(layoutManager);
-        //adapter = new Adapter(this, viewItems);
-        //mRecyclerView.setAdapter(adapter);
-        //String nicknameString = getIntent().getStringExtra("nickname");
-        //Model nicknameItem = new Model(nicknameString);
-        //viewItems.add(nicknameItem);
-        //viewItems.add(nicknameItem);
 
         Typeface[] font = new Typeface[] {
                 getResources().getFont(R.font.festive_regular),

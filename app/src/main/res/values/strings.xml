@@ -7,4 +7,6 @@
     <string name="choose_font_for_nickname">Choose the font\nyou like for\nthe nickname</string>
     <string name="random">Random</string>
     <string name="random_font">Random font</string>
+    <string name="finished_nickname">Finished Nickname</string>
+    <string name="random_nickname">Random Nickname</string>
 </resources>

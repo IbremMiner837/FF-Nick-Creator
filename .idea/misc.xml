@@ -4,8 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/User/AndroidStudioProjects/NickCreator/app/src/main/res/layout/activity_main.xml" value="0.22" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/NickCreator/app/src/main/res/layout/activity_select_font.xml" value="0.25" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/NickCreator/app/src/main/res/layout/activity_select_font.xml" value="0.18229166666666666" />
         <entry key="..\:/Users/User/AndroidStudioProjects/NickCreator/app/src/main/res/layout/nickname_list.xml" value="0.18229166666666666" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/NickCreator/app/src/main/res/layout/select_finished_nickname.xml" value="0.25" />
       </map>
     </option>
   </component>
